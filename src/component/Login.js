@@ -32,7 +32,7 @@ export class Login extends React.Component{
                         <Avatar className="avatar">
                             <LockIcon />
                         </Avatar>
-                        <Typography variant="headline">Sign in</Typography>
+                        <Typography variant="headline">Hi! Sign in</Typography>
                         <form className="form">
                             <FormControl margin="normal" required fullWidth>
                                 <InputLabel htmlFor="email">Email Address</InputLabel>
@@ -53,8 +53,7 @@ export class Login extends React.Component{
                                 variant="raised"
                                 color="primary"
                                 className="submit"
-                                onClick = {verify}
-                            >
+                                onClick = {verify} >
                                 Sign in
                             </Button>
                         </form>
