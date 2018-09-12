@@ -1,0 +1,38 @@
+.texto{
+    color: #0C0F23;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border: none;
+    font: normal 15px "Trebuchet MS", Helvetica, sans-serif;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.nombre{
+    color: #0C0F23;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border: none;
+    font: normal normal bold 18px "Trebuchet MS", Helvetica, sans-serif;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.lay{
+    width: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.perfil{
+    size: 200px;
+}
+.pap {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}

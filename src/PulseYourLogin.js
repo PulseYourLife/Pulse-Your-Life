@@ -1,6 +1,7 @@
 import React from 'react';
 import {Login} from './component/Login';
 import {Register} from './component/Register';
+import {Perfil} from './component/Perfil';
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 import Button from "@material-ui/core/Button";
 export class PulseYourLogin extends React.Component {
@@ -22,10 +23,12 @@ export class PulseYourLogin extends React.Component {
                             <ul>
                                 <li><Link to="/">Login</Link></li>
                                 <li><Link to="/register">Register</Link></li>
+                                <li><Link to="/perfil">Perfil</Link></li>
                             </ul>
                             <div>
                                 <Route exact path="/" component={LoginView}/>
                                 <Route path="/register" component={Register}/>
+                                <Route path="/perfil" component={Perfil}/>
                             </div>
 
 
