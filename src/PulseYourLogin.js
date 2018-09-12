@@ -1,6 +1,8 @@
 import React from 'react';
 import {Login} from './component/Login';
+import {Statistics} from './component/Statistics';
 import {Register} from './component/Register';
+import {Perfil} from './component/Perfil';
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 import Button from "@material-ui/core/Button";
 import {About} from './component/About'
@@ -12,7 +14,11 @@ export class PulseYourLogin extends React.Component {
 
     render() {
         const LoginView = () => (
-            <Login/>
+            <Login/>			
+        );
+		
+		const StatisticsView = () => (
+            <Statistics />			
         );
         return (
                     <Router>
@@ -24,11 +30,14 @@ export class PulseYourLogin extends React.Component {
                                 <li><Link to="/">Login</Link></li>
                                 <li><Link to="/register">Register</Link></li>
                                 <li><Link to="/about">About</Link></li>
+                                <li><Link to="/perfil">Perfil</Link></li>
                             </ul>
                             <div>
                                 <Route exact path="/" component={LoginView}/>
+								<Route path="/Statistics" component={StatisticsView}/>
                                 <Route path="/register" component={Register}/>
                                 <Route path="/about" component={About}/>
+                                <Route path="/perfil" component={Perfil}/>
                             </div>
 
 
