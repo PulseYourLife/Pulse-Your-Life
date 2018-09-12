@@ -1,5 +1,6 @@
 import React from 'react';
 import {Login} from './component/Login';
+import {Statistics} from './component/Statistics';
 import {Register} from './component/Register';
 import {Perfil} from './component/Perfil';
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
@@ -12,7 +13,11 @@ export class PulseYourLogin extends React.Component {
 
     render() {
         const LoginView = () => (
-            <Login/>
+            <Login/>			
+        );
+		
+		const StatisticsView = () => (
+            <Statistics />			
         );
         return (
                     <Router>
@@ -27,6 +32,7 @@ export class PulseYourLogin extends React.Component {
                             </ul>
                             <div>
                                 <Route exact path="/" component={LoginView}/>
+								<Route path="/Statistics" component={StatisticsView}/>
                                 <Route path="/register" component={Register}/>
                                 <Route path="/perfil" component={Perfil}/>
                             </div>
