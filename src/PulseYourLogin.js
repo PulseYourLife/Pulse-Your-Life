@@ -1,5 +1,6 @@
 import React from 'react';
 import {Login} from './component/Login';
+import {Statistics} from './component/Statistics';
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 export class PulseYourLogin extends React.Component {
 
@@ -9,7 +10,11 @@ export class PulseYourLogin extends React.Component {
 
     render() {
         const LoginView = () => (
-            <Login/>
+            <Login/>			
+        );
+		
+		const StatisticsView = () => (
+            <Statistics />			
         );
         return (
                     <Router>
@@ -19,6 +24,7 @@ export class PulseYourLogin extends React.Component {
                             </header>
                             <div>
                                 <Route exact path="/" component={LoginView}/>
+								<Route path="/Statistics" component={StatisticsView}/>
                             </div>
                         </div>
                     </Router>
