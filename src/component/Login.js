@@ -8,9 +8,12 @@ import InputLabel from '@material-ui/core/InputLabel';
 import LockIcon from '@material-ui/icons/LockOutlined';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 import './Login.css'
-
 export class Login extends React.Component{
+    constructor(props) {
+            super(props);
+    }
 
     render(){
         function verify() {
@@ -23,7 +26,6 @@ export class Login extends React.Component{
 
             }
         }
-
         return (
             <React.Fragment>
                 <CssBaseline />
@@ -56,6 +58,16 @@ export class Login extends React.Component{
                                 onClick = {verify} >
                                 Sign in
                             </Button>
+                            <br></br>
+                            <Link to="/Register"><Button
+                                type="reg"
+                                fullWidth
+                                variant="raised"
+                                color="primary"
+                                className="reg"
+                                >
+                                Register
+                            </Button></Link>
                         </form>
                     </Paper>
                 </main>

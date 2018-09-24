@@ -14,7 +14,7 @@ export class PulseYourLogin extends React.Component {
 
     render() {
         const LoginView = () => (
-            <Login/>			
+            <Login />
         );
 		
 		const StatisticsView = () => (
@@ -26,18 +26,8 @@ export class PulseYourLogin extends React.Component {
                             <header className="App-header">
                                 <h1 className="App-title">Pulse Your Life </h1>
                             </header>
-                            <ul>
-                                <li><Link to="/">Login</Link></li>
-                                <li><Link to="/register">Register</Link></li>
-                                <li><Link to="/about">About</Link></li>
-                                <li><Link to="/perfil">Perfil</Link></li>
-                            </ul>
                             <div>
                                 <Route exact path="/" component={LoginView}/>
-								<Route path="/Statistics" component={StatisticsView}/>
-                                <Route path="/register" component={Register}/>
-                                <Route path="/about" component={About}/>
-                                <Route path="/perfil" component={Perfil}/>
                             </div>
 
 
