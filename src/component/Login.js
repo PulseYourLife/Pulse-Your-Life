@@ -16,6 +16,12 @@ export class Login extends React.Component{
     constructor(props) {
             super(props);
     }
+    state = {
+        isLoggedIn: JSON.parse(localStorage.getItem("isLoggedIn")),
+        email:"",
+        password:""
+    };
+
     render(){
         const StatisticsView = () =>(
             <Statistics/>
@@ -26,8 +32,10 @@ export class Login extends React.Component{
         function verify() {
             if(document.getElementById('email').value == localStorage.getItem('user')  && document.getElementById('password').value == localStorage.getItem('password')){
                 localStorage.setItem('isLoggedIn', true);
+                alert("Successfull login");
             }else{
                 localStorage.setItem('isLoggedIn', false);
+                alert("Try again");
             }
         }
         return (
@@ -61,7 +69,7 @@ export class Login extends React.Component{
                                     variant="raised"
                                     color="primary"
                                     className="submit"
-                                    onClick = {verify} >
+                                    onClick = {verify}>
                                     Sign in
                                 </Button>
                                 <br></br>

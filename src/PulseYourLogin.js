@@ -12,9 +12,9 @@ export class PulseYourLogin extends React.Component {
         super(props);
     }
     state = {
-                    isLoggedIn: JSON.parse(localStorage.getItem("isLoggedIn")),
-                    email:"",
-                    password:""
+        isLoggedIn: JSON.parse(localStorage.getItem("isLoggedIn")),
+        email:"",
+        password:""
     };
     render() {
         localStorage.setItem('user', "david");
@@ -38,7 +38,7 @@ export class PulseYourLogin extends React.Component {
                             <div>
                                 <Route exact path="/" component={LoginView}/>
                                 <Route exact path="/Register" component={RegisterView}/>
-                                {this.state.isLoggedIn && <Route exact path="/Statistics" component={StatisticsView}/>}
+                                <Route exact path='/Statistics' component={StatisticsView}/>
                             </div>
                         </div>
                     </Router>

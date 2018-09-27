@@ -4,8 +4,6 @@
     <list default="true" id="0e1dd90c-aa7e-4494-bc5f-675b7177d4d8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PulseYourLogin.js" afterPath="$PROJECT_DIR$/src/PulseYourLogin.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/Login.js" afterPath="$PROJECT_DIR$/src/component/Login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/Perfil.js" afterPath="$PROJECT_DIR$/src/component/Perfil.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/component/Register.js" afterPath="$PROJECT_DIR$/src/component/Register.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -105,8 +103,8 @@
       <file leaf-file-name="Login.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/component/Login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="27" column="57" lean-forward="false" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+            <state relative-caret-position="-90">
+              <caret line="34" column="41" lean-forward="false" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -146,7 +144,7 @@
         <entry file="file://$PROJECT_DIR$/src/PulseYourLogin.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="17" selection-end-column="6" />
+              <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="17" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -816,14 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PulseYourLogin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="17" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/Register.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
@@ -832,10 +822,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/PulseYourLogin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="17" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/Login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="27" column="57" lean-forward="false" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+        <state relative-caret-position="-90">
+          <caret line="34" column="41" lean-forward="false" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
           <folding />
         </state>
       </provider>
