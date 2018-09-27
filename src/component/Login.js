@@ -15,14 +15,8 @@ import './Login.css';
 export class Login extends React.Component{
     constructor(props) {
             super(props);
-            localStorage.setItem('isLoggedIn', false);
     }
     render(){
-            localStorage.setItem('user', "david");
-            localStorage.setItem('password', "david");
-            const usr = localStorage.getItem('user');
-            const psswd = localStorage.getItem('password');
-
         const StatisticsView = () =>(
             <Statistics/>
         );
@@ -32,10 +26,8 @@ export class Login extends React.Component{
         function verify() {
             if(document.getElementById('email').value == localStorage.getItem('user')  && document.getElementById('password').value == localStorage.getItem('password')){
                 localStorage.setItem('isLoggedIn', true);
-                alert("Login Successfull");
             }else{
                 localStorage.setItem('isLoggedIn', false);
-                alert("Incorrect Credentials");
             }
         }
         return (
@@ -63,8 +55,7 @@ export class Login extends React.Component{
                                     />
                                 </FormControl>
                                 <Button
-                                    component={Link}
-                                    to= "/Statistics"
+                                    href="/Statistics"
                                     type="submit"
                                     fullWidth
                                     variant="raised"
@@ -75,8 +66,7 @@ export class Login extends React.Component{
                                 </Button>
                                 <br></br>
                                 <Button
-                                    component = {Link}
-                                    to="/Register"
+                                    href="/Register"
                                     type="submit"
                                     fullWidth
                                     variant="raised"
@@ -85,12 +75,7 @@ export class Login extends React.Component{
                                     >
                                     Register
                                 </Button>
-                                <h1>{localStorage.getItem('isLoggedIn')}</h1>
                             </form>
-                            <div>
-                                <Route  path="/Register" component={RegisterView}/>
-                                {localStorage.getItem('isLoggedIn') && <Route path="/Statistics" component={StatisticsView}/>}
-                             </div>
                         </Paper>
                     </main>
                 </React.Fragment>

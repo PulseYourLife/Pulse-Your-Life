@@ -82,6 +82,15 @@ export class Register extends React.Component{
                                 className="submit" >
                                 Register
                             </Button>
+                            <Button
+                                href="/"
+                                type="submit"
+                                fullWidth
+                                variant="raised"
+                                color="primary"
+                                className="submit" >
+                                Go Back
+                            </Button>
                         </form>
                     </Paper>
                 </main>
