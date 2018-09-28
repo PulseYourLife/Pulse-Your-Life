@@ -24,6 +24,12 @@ export class PulseYourLogin extends React.Component {
                handlePasswordChange={this.handlePasswordChange} />
     );
     render() {
+        const ProfileView  = () => (
+            <Perfil/>
+        );
+        const AboutView  = () => (
+            <About/>
+        );
         const LogView = () => (
             <Login />
         );
@@ -39,6 +45,9 @@ export class PulseYourLogin extends React.Component {
                     <div>
                         <div>
                             <Route exact path="/" component={StatisticsView} />
+                            <Route exact path="/Profile" component={ProfileView} />
+                            <Route exact path="/About" component={AboutView} />
+                            <Route exact path="/Login" component={LogView} />
                         </div>
                     </div>
                 </Router>
@@ -54,6 +63,9 @@ export class PulseYourLogin extends React.Component {
                             <Route exact path="/" component={this.LoginView}/>
                             <Route exact path="/Register" component={RegisterView}/>
                             <Route exact path='/Statistics' component={StatisticsView}/>
+                            <Route exact path="/Profile" component={ProfileView} />
+                            <Route exact path="/About" component={AboutView} />
+                            <Route exact path="/Login" component={this.LoginView} />
                         </div>
                     </div>
                 </Router>
@@ -61,7 +73,6 @@ export class PulseYourLogin extends React.Component {
         }
     }
     handleSubmit = event => {
-        alert("email: "+this.state.email+" password: "+this.state.password);
         if (this.state.email === localStorage.getItem("user") &&
             this.state.password === localStorage.getItem("password")) {
             localStorage.setItem("isLoggedIn", true);

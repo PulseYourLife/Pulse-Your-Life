@@ -70,8 +70,36 @@ export class Statistics extends React.Component {
                   <h1> Your Pulse three</h1>
                   <ChartistGraph data={lineChartData} options={lineChartOptions} type={'Line'} />
               </div>
+              <Button
+                  href="/Profile"
+                  type="submit"
+                  fullWidth
+                  variant="raised"
+                  color="primary"
+                  className="submit"
+                  >
+                  My Account
+              </Button>
+              <Button
+                  href="/About"
+                  type="submit"
+                  fullWidth
+                  variant="raised"
+                  color="primary"
+                  className="submit">
+                  About
+              </Button>
+              <Button
+                  href="/Login"
+                  type="submit"
+                  fullWidth
+                  variant="raised"
+                  color="primary"
+                  className="submit">
+                  Log Out
+              </Button>
           </main>
       </React.Fragment>);
-  }
+    }
   }
 export default Statistics;
