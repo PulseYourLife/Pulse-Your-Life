@@ -12,7 +12,6 @@ export class Perfil extends React.Component{
     render(){
         return (
             <React.Fragment>
-
                 <main className="lay">
                     <Paper className="pap">
                         <Avatar className="perfil" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0l-p8Oe5wqHfNQv0L6A4OuAfrZmb7M6Wvnd7-LeMQB6BmBu37Sg"/>
@@ -44,9 +43,6 @@ export class Perfil extends React.Component{
                             </form>
 
                         <FormControl fullWidth>
-
-
-
                                 <Button
                                     type="submit"
                                     fullWidth
@@ -55,18 +51,14 @@ export class Perfil extends React.Component{
                                     className="submit" >
                                     Save
                                 </Button>
-
                         </FormControl>
-
                         <FormControl fullWidth>
                         <Button
                             type="submit"
                             fullWidth
                             variant="raised"
-
                             className="submit" >
                             Cancel
-
                         </Button>
                         </FormControl>
                     </Paper>

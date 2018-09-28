@@ -10,10 +10,10 @@ import Healing from '@material-ui/icons/Healing';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import './Login.css'
+import {Login} from './Login';
 
 export class Statistics extends React.Component {
   render() {
-
     var data = {
       labels: ['W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7', 'W8', 'W9', 'W10'],
       series: [
@@ -50,35 +50,56 @@ export class Statistics extends React.Component {
 	}
 	
 	var lineChartOptions = {
-		low: 0,
-		showArea: true
-	}
-
-    return (
-	<React.Fragment>
-                <CssBaseline />
-                <main className="layout">
-                    <Paper className="paper">
-                        <Avatar className="avatar">
-                            <Healing />
-                        </Avatar>
-                        <Typography variant="headline"> MY HEART</Typography>                        																							
-                    </Paper>
-					<div>
-						<h1> Your Pulse </h1>
-						<ChartistGraph data={data} options={options} type={type} />
-						<h1> Your Pulse two</h1>
-						<ChartistGraph data={simpleLineChartData} type={'Line'} />
-						<h1> Your Pulse three</h1>
-						<ChartistGraph data={lineChartData} options={lineChartOptions} type={'Line'} />
-					  </div>
-					
-                </main>
-            </React.Fragment>
-	
-	
-      
-    );
+        low: 0,
+        showArea: true
+    }
+      return ( <React.Fragment>
+          <CssBaseline />
+          <main className="layout">
+              <Paper className="paper">
+                  <Avatar className="avatar">
+                      <Healing />
+                  </Avatar>
+                  <Typography variant="headline"> MY HEART</Typography>
+              </Paper>
+              <div>
+                  <h1> Your Pulse </h1>
+                  <ChartistGraph data={data} options={options} type={type} />
+                  <h1> Your Pulse two</h1>
+                  <ChartistGraph data={simpleLineChartData} type={'Line'} />
+                  <h1> Your Pulse three</h1>
+                  <ChartistGraph data={lineChartData} options={lineChartOptions} type={'Line'} />
+              </div>
+              <Button
+                  href="/Profile"
+                  type="submit"
+                  fullWidth
+                  variant="raised"
+                  color="primary"
+                  className="submit"
+                  >
+                  My Account
+              </Button>
+              <Button
+                  href="/About"
+                  type="submit"
+                  fullWidth
+                  variant="raised"
+                  color="primary"
+                  className="submit">
+                  About
+              </Button>
+              <Button
+                  href="/Login"
+                  type="submit"
+                  fullWidth
+                  variant="raised"
+                  color="primary"
+                  className="submit">
+                  Log Out
+              </Button>
+          </main>
+      </React.Fragment>);
+    }
   }
-}
 export default Statistics;
