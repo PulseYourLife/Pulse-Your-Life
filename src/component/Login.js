@@ -29,15 +29,6 @@ export class Login extends React.Component{
         const RegisterView = () => (
             <Register/>
         );
-        function verify() {
-            if(document.getElementById('email').value == localStorage.getItem('user')  && document.getElementById('password').value == localStorage.getItem('password')){
-                localStorage.setItem('isLoggedIn', true);
-                alert("Successfull login");
-            }else{
-                localStorage.setItem('isLoggedIn', false);
-                alert("Try again");
-            }
-        }
         return (
             <Router>
                 <React.Fragment>
@@ -51,7 +42,7 @@ export class Login extends React.Component{
                             <form className="form">
                                 <FormControl margin="normal" required fullWidth>
                                     <InputLabel htmlFor="email">Email Address</InputLabel>
-                                    <Input id="email" name="email" autoComplete="email" autoFocus />
+                                    <Input id="email" name="email" autoComplete="email" autoFocus onChange = {this.props.handleEmailChange} />
                                 </FormControl>
                                 <FormControl margin="normal" required fullWidth>
                                     <InputLabel htmlFor="password">Password</InputLabel>
@@ -60,16 +51,16 @@ export class Login extends React.Component{
                                         type="password"
                                         id="password"
                                         autoComplete="current-password"
+                                        onChange = {this.props.handlePasswordChange}
                                     />
                                 </FormControl>
                                 <Button
-                                    href="/Statistics"
                                     type="submit"
                                     fullWidth
                                     variant="raised"
                                     color="primary"
                                     className="submit"
-                                    onClick = {verify}>
+                                    onClick = {this.props.handleLogin}>
                                     Sign in
                                 </Button>
                                 <br></br>
@@ -89,6 +80,17 @@ export class Login extends React.Component{
                 </React.Fragment>
             </Router>
         );
+    }
+    handleEmailChange = event => {
+        this.setState({
+            email: event.target.value
+        });
+    }
+
+    handlePasswordChange = event => {
+        this.setState({
+            password: event.target.value
+        });
     }
 
 }
