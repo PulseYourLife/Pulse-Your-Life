@@ -1,7 +1,7 @@
 import ChartistGraph from 'react-chartist';
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
+import { Button } from 'reactstrap';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
@@ -11,6 +11,8 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import './Login.css'
 import Chart from './Chart';
+import {Login} from './Login';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export class Statistics extends React.Component {
 
@@ -59,23 +61,45 @@ export class Statistics extends React.Component {
     }
 
     render() {
-
-
-
-    return (
+        return (
 	
-	<React.Fragment>
-                <CssBaseline />
-                <main className="layout">
-                    <div className="App">
-                        <Chart chartData={this.state.charData} legendPosition="bottom" />
-                    </div>
-                </main>
-            </React.Fragment>
-	
-	
-      
-    );
+            <React.Fragment>
+                        <CssBaseline />
+                        <main className="layout">
+                            <div className="App">
+							<header className="App-header">							  
+							  <h1 className="App-title">PULSE YOUR LIFE</h1>
+							</header>
+                                <Chart chartData={this.state.charData} legendPosition="bottom" />
+                            </div> <br />
+							<Button
+								color="info"
+								size ="lg" block
+                                href="/Profile"
+                                type="submit"                                
+                            >
+                                My Account
+                            </Button>{' '}
+                            <Button
+								color="info"
+								size ="lg" block
+                                href="/About"
+                                type="submit"                                
+							>
+                                About
+                            </Button>{' '}
+                            <Button
+								color="danger"
+								size = "lg" block
+                                href="/Login"
+                                type="submit"                                
+                            >
+                                Log Out
+                            </Button>										
+                        </main>													
+                    </React.Fragment>
+
+            );
+        }
   }
-}
 export default Statistics;
