@@ -67,7 +67,7 @@ export class Statistics extends React.Component {
                         <CssBaseline />
                         <main className="layout">
                             <div className="App">
-							<header className="App-header">							  
+							<header className="App-header">
 							  <h1 className="App-title">PULSE YOUR LIFE</h1>
 							</header>
                                 <Chart chartData={this.state.charData} legendPosition="bottom" />

@@ -1,3 +1,25 @@
+
+
+.App-header{
+    height: 80px;
+    color: #1c1e1e;
+}
+
+.App-title{
+    color: #ffffff;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 29px;
+    letter-spacing: 3px;
+    word-spacing: -2.4px;
+    font-weight: normal;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    text-align: left;
+    margin-left: 10%;
+}
+
 .texto{
     color: #0C0F23;
     -webkit-box-sizing: content-box;
@@ -7,10 +29,12 @@
     font: normal 15px "Trebuchet MS", Helvetica, sans-serif;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
+    text-overflow: ellipsis;
 }
 
 .nombre{
     color: #0C0F23;
+    margin-bottom: 20px;
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
@@ -18,26 +42,78 @@
     font: normal normal bold 18px "Trebuchet MS", Helvetica, sans-serif;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
+
 }
 
 .lay{
-    width: 25%;
+     margin-top: 30px;
+     width: 40%;
+     height: 60%;
+     display: block;
+     margin-left: 30px;
+     margin-right: auto;
+     position: absolute;
+ }
+
+.lay1{
+    margin-top: 30px;
+
     display: block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: 30px;
 }
-.perfil{
-    size: 200px;
+
+.submit{
+    width: 80%;
 }
 .pap {
-
-    display: flex;
+    height: 400px;
+    width: 80%;
     flex-direction: column;
     align-items: center;
     padding: 10px;
 }
 
-.submit{
-    padding: 10px;
-    margin-top: 10px;
+.column {
+    width: 50%;
+
+
+}
+
+.column11{
+    padding-left: 10%;
+    padding-top: 5%;
+}
+.column1 {
+    margin-top: 10%;
+    margin-bottom: auto;
+    margin-left: 10%;
+    width: 50%;
+    padding-right: 10%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.img1 {
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+
+.img2{
+    position: absolute;
+    height: 90px;
+    width: 350px;
+    padding: 0px;
+    margin-top: -22px;
+    float: right;
+    margin-left: 30px;
 }

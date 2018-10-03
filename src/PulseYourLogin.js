@@ -57,6 +57,8 @@ export class PulseYourLogin extends React.Component {
                 <Router>
                     <div className="App">
                         <header className="App-header">
+                            <img className='img2' src="https://png2.kisspng.com/20180215/pce/kisspng-pulse-heart-rate-ekg-cliparts-5a85f54d43d531.2241024415187285252779.png"/>
+                            <img className='img2' src="https://png2.kisspng.com/20180215/pce/kisspng-pulse-heart-rate-ekg-cliparts-5a85f54d43d531.2241024415187285252779.png"/>
                             <h1 className="App-title">Pulse Your Life </h1>
                         </header>
                         <div>
