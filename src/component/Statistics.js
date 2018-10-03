@@ -1,7 +1,7 @@
 import ChartistGraph from 'react-chartist';
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
+import { Button } from 'reactstrap';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
@@ -10,96 +10,96 @@ import Healing from '@material-ui/icons/Healing';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import './Login.css'
+import Chart from './Chart';
 import {Login} from './Login';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export class Statistics extends React.Component {
-  render() {
-    var data = {
-      labels: ['W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7', 'W8', 'W9', 'W10'],
-      series: [
-        [1, 2, 4, 8, 6, -2, -1, -4, -6, -2]
-      ]
-    };
 
-    var options = {
-      high: 10,
-      low: -10,
-      axisX: {
-        labelInterpolationFnc: function(value, index) {
-          return index % 2 === 0 ? value : null;
+    constructor(){
+        super();
+        this.state={
+            charData:{}
         }
-      }
-    };
+    }
 
-    var type = 'Bar'		
+    componentWillMount(){
+        this.getChartData();
+    }
 
-	var simpleLineChartData = {
-	  labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-	  series: [
-		[12, 9, 7, 8, 5],
-		[2, 1, 3.5, 7, 3],
-		[1, 3, 4, 5, 6]
-	  ]
-    }	
+    getChartData(){
+        this.setState({
+            //Ajax calls here
+            charData:{
+                labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5',
+                    'Week 6'],
+                datasets: [
+                    {
+                        label: 'Your Pulse',
+                        data: [
+                            212,
+                            123,
+                            345,
+                            245,
+                            234,
+                            231,
+                            789
+                        ],
+                        backgroundColor: [
+                            'rgba(128, 255, 96 , 0.6)',
+                            'rgba(54, 162, 235 , 0.6)',
+                            'rgba(255, 206, 86 , 0.6)',
+                            'rgba(75, 192, 192 , 0.6)',
+                            'rgba(153, 102, 255 , 0.6)',
+                            'rgba(255, 159, 64 , 0.6)',
+                            'rgba(255, 99, 132 , 0.6)'
+                        ]
+                    }
+                ]
+            }
+        });
+    }
 
-	var lineChartData = {
-		labels: [1, 2, 3, 4, 5, 6, 7, 8],
-		series: [
-			[5, 9, 7, 8, 5, 3, 5, 4]
-		]
-	}
+    render() {
+        return (
 	
-	var lineChartOptions = {
-        low: 0,
-        showArea: true
-    }
-      return ( <React.Fragment>
-          <CssBaseline />
-          <main className="layout">
-              <Paper className="paper">
-                  <Avatar className="avatar">
-                      <Healing />
-                  </Avatar>
-                  <Typography variant="headline"> MY HEART</Typography>
-              </Paper>
-              <div>
-                  <h1> Your Pulse </h1>
-                  <ChartistGraph data={data} options={options} type={type} />
-                  <h1> Your Pulse two</h1>
-                  <ChartistGraph data={simpleLineChartData} type={'Line'} />
-                  <h1> Your Pulse three</h1>
-                  <ChartistGraph data={lineChartData} options={lineChartOptions} type={'Line'} />
-              </div>
-              <Button
-                  href="/Profile"
-                  type="submit"
-                  fullWidth
-                  variant="raised"
-                  color="primary"
-                  className="submit"
-                  >
-                  My Account
-              </Button>
-              <Button
-                  href="/About"
-                  type="submit"
-                  fullWidth
-                  variant="raised"
-                  color="primary"
-                  className="submit">
-                  About
-              </Button>
-              <Button
-                  href="/Login"
-                  type="submit"
-                  fullWidth
-                  variant="raised"
-                  color="primary"
-                  className="submit">
-                  Log Out
-              </Button>
-          </main>
-      </React.Fragment>);
-    }
+            <React.Fragment>
+                        <CssBaseline />
+                        <main className="layout">
+                            <div className="App">
+							<header className="App-header">							  
+							  <h1 className="App-title">PULSE YOUR LIFE</h1>
+							</header>
+                                <Chart chartData={this.state.charData} legendPosition="bottom" />
+                            </div> <br />
+							<Button
+								color="info"
+								size ="lg" block
+                                href="/Profile"
+                                type="submit"                                
+                            >
+                                My Account
+                            </Button>{' '}
+                            <Button
+								color="info"
+								size ="lg" block
+                                href="/About"
+                                type="submit"                                
+							>
+                                About
+                            </Button>{' '}
+                            <Button
+								color="danger"
+								size = "lg" block
+                                href="/Login"
+                                type="submit"                                
+                            >
+                                Log Out
+                            </Button>										
+                        </main>													
+                    </React.Fragment>
+
+            );
+        }
   }
 export default Statistics;
