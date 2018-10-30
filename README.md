@@ -1,8 +1,9 @@
 # Pulse Your Life
 
 [![CircleCI](https://circleci.com/gh/PulseYourLife/Pulse-Your-Life.svg?style=svg)](https://circleci.com/gh/PulseYourLife/Pulse-Your-Life)
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://fathomless-escarpment-41680.herokuapp.com)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a553e33926e740a5b6e693197871c8e5)](https://www.codacy.com/app/Pulse-Your-Life/Pulse-Your-Life?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PulseYourLife/Pulse-Your-Life&amp;utm_campaign=Badge_Grade)
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://fathomless-escarpment-41680.herokuapp.com)
 ## Our Purpose
 We want to give an opportunity to all those who suffer cardiac problems to be comfortable and not to be 
 afraid of suffering to heart attack, we propose to mobile application that shows real time stadistics and 
