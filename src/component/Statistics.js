@@ -26,6 +26,9 @@ export class Statistics extends React.Component {
     componentWillMount(){
         this.getChartData();
     }
+    logOut = event => {
+        localStorage.setItem("isLoggedIn", false)
+    };
 
     getChartData(){
         this.setState({
@@ -92,7 +95,8 @@ export class Statistics extends React.Component {
 								color="danger"
 								size = "lg" block
                                 href="/Login"
-                                type="submit"                                
+                                type="submit"
+                                onClick={this.logOut}
                             >
                                 Log Out
                             </Button>										
@@ -102,4 +106,5 @@ export class Statistics extends React.Component {
             );
         }
   }
+
 export default Statistics;

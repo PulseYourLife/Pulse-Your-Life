@@ -14,6 +14,11 @@ export class Register extends React.Component{
     constructor(props){
         super(props);
     }
+    stated = {
+        isLoggedIn: JSON.parse(localStorage.getItem("isLoggedIn")),
+        email:"",
+        password:""
+    };
     state = {
         name: "",
         email:"",
@@ -26,7 +31,9 @@ export class Register extends React.Component{
     };
     render(){
         return (
-            <React.Fragment>
+
+
+        <React.Fragment>
                 <CssBaseline />
                 <main className="layout">
                     <Paper className="paper">
@@ -85,6 +92,7 @@ export class Register extends React.Component{
                                 <Input name="weight" type="float"  id="weight" autoComplete="weight" autoFocus onChange = {this.handleWeightChange}/>
                             </FormControl>
                             <Button
+                                href={this.stated.isLoggedIn ? '/Register' : '/Login'}
                                 type="submit"
                                 fullWidth
                                 variant="raised"
@@ -118,6 +126,7 @@ export class Register extends React.Component{
                     localStorage.setItem('user', this.state.email);
                     localStorage.setItem('password', this.state.password);
                     alert("Successfully Register");
+
                 }else{
                     alert("Write a valid numeric data");
                 }
