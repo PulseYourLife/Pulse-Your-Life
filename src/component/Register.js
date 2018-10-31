@@ -9,6 +9,9 @@ import LockIcon from '@material-ui/icons/LockOutlined';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import './Register.css'
+import axios from 'axios';
+import {fetch} from 'whatwg-fetch';
+
 
 export class Register extends React.Component{
     constructor(props){
@@ -123,6 +126,23 @@ export class Register extends React.Component{
         if(this.state.height!="" && this.state.weight !="" && this.state.password!="" && this.state.cpassword!="" && this.state.email!="" && this.state.age !="" && this.state.gender!="" && this.state.name!=""){
             if(this.state.password == this.state.cpassword){
                 if(parseInt(this.state.age) > 0 && parseInt(this.state.height) > 0 && parseFloat(this.state.weight) > 0 ){
+                    var data = {
+                    name: this.state.name,
+                    email: this.state.email,
+                    password: this.state.password,
+                    age: this.state.age,
+                    gender:this.state.gender,
+                    height: this.state.height,
+                    weight: this.state.weight
+                    }
+                    const headers = new Headers();
+                    headers.append('Content-Type', 'application/json');
+                    const options = {
+                        method : 'POST',
+                        headers,
+                        body: JSON.stringify(data)
+                    };
+                    const request = new Request ('http://localhost:8080/patient/add/data',options);
                     localStorage.setItem('user', this.state.email);
                     localStorage.setItem('password', this.state.password);
                     alert("Successfully Register");

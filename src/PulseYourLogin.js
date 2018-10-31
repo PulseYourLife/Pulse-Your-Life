@@ -74,13 +74,21 @@ export class PulseYourLogin extends React.Component {
             );
         }
     }
+
     handleSubmit = event => {
+
+        		//const axios = require('axios');
+
+                // Make a request for a user with a given ID
+                //var text = axios.get('http://localhost:8080/ambulances/getAmbulances').then(function(response){console.log(response);}).catch(function (error) {console.log(error);});
+
         if (this.state.email === localStorage.getItem("user") &&
             this.state.password === localStorage.getItem("password")) {
             localStorage.setItem("isLoggedIn", true);
             this.setState({ isLoggedIn: true });
         }
     }
+
     handleEmailChange = event => {
         this.setState({
             email: event.target.value
