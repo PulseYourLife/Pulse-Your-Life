@@ -73,10 +73,10 @@ export class Statistics extends React.Component {
         return (
 	
             <React.Fragment>
+
 				< Menu />			
 				<main className="margen">							
-                        <div>
-							
+                        <div>							
                                 <Chart chartData={this.state.charData} legendPosition="bottom" />
                             </div> <br />							
 				</main>
