@@ -5,6 +5,7 @@ import FormControl from '@material-ui/core/FormControl';
 
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+
 import { Button, ButtonGroup } from 'reactstrap'
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -14,6 +15,7 @@ localStorage.setItem('email', "brandonp93@gmail.com");
 localStorage.setItem('age', "30");
 localStorage.setItem('weight', "64");
 localStorage.setItem('height', "175");
+
 export class Perfil extends React.Component{
     constructor() {
         super();
@@ -78,7 +80,6 @@ export class Perfil extends React.Component{
     render(){
         return (
             <React.Fragment>
-
                 <div class="row">
                     <div class="column">
                         <div class="column11">
@@ -139,12 +140,6 @@ export class Perfil extends React.Component{
                             </div>
                     </div>
                 </div>
-
-
-
-
-
-
 
             </React.Fragment>
 

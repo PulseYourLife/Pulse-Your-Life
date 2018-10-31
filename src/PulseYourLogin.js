@@ -47,7 +47,8 @@ export class PulseYourLogin extends React.Component {
                             <Route exact path="/" component={StatisticsView} />
                             <Route exact path="/Profile" component={ProfileView} />
                             <Route exact path="/About" component={AboutView} />
-                            <Route exact path="/Login" component={LogView} />
+                            <Route exact path="/Login" component={LogView} />							
+							<Route exact path="/Statistics" component={StatisticsView} />							
                         </div>
                     </div>
                 </Router>

@@ -9,6 +9,7 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Grid from '@material-ui/core/Grid';
+import {Menu} from './Menu';
 
 export class About extends React.Component {
     render() {
@@ -16,6 +17,7 @@ export class About extends React.Component {
             <React.Fragment>
                 <CssBaseline/>
                 <main className="layout">
+					<Menu />
                     <Paper className="paper">
                         <Button variant={"raised"} color={"primary"} size={"large"}>Google Play</Button>
                         <br/><br/>

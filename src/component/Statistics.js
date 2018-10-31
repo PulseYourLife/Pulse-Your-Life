@@ -9,9 +9,10 @@ import InputLabel from '@material-ui/core/InputLabel';
 import Healing from '@material-ui/icons/Healing';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import './Login.css'
+import './Statistics.css'
 import Chart from './Chart';
 import {Login} from './Login';
+import {Menu} from './Menu';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export class Statistics extends React.Component {
@@ -28,8 +29,16 @@ export class Statistics extends React.Component {
     }
 
     getChartData(){
-        this.setState({
-            //Ajax calls here
+		
+		/**var http = new XMLHttpRequest();
+		var url='https://pulseyourlogic.herokuapp.com/values/getValuesYear';
+		http.open("GET", url);
+		http.send();
+		//alert(http.responseText);**/
+		
+		
+		this.setState({
+            //Ajax calls here										
             charData:{
                 labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5',
                     'Week 6'],
@@ -64,40 +73,14 @@ export class Statistics extends React.Component {
         return (
 	
             <React.Fragment>
-                        <CssBaseline />
-                        <main className="layout">
-                            <div className="App">
-							<header className="App-header">
-							  <h1 className="App-title">PULSE YOUR LIFE</h1>
-							</header>
+
+				< Menu />			
+				<main className="margen">							
+                        <div>							
                                 <Chart chartData={this.state.charData} legendPosition="bottom" />
-                            </div> <br />
-							<Button
-								color="info"
-								size ="lg" block
-                                href="/Profile"
-                                type="submit"                                
-                            >
-                                My Account
-                            </Button>{' '}
-                            <Button
-								color="info"
-								size ="lg" block
-                                href="/About"
-                                type="submit"                                
-							>
-                                About
-                            </Button>{' '}
-                            <Button
-								color="danger"
-								size = "lg" block
-                                href="/Login"
-                                type="submit"                                
-                            >
-                                Log Out
-                            </Button>										
-                        </main>													
-                    </React.Fragment>
+                            </div> <br />							
+				</main>
+            </React.Fragment>
 
             );
         }
