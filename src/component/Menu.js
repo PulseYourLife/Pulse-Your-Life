@@ -3,20 +3,22 @@ import './Menu.css';
 export class Menu extends React.Component {		
 	render() {
         return (
-			<div className ="container center">
-			<nav className ="menu">            
-			<div className="menu__right">
-                <ul className="menu__list">
-                    <li className="menu__list-item"><a className="menu__link " href="/Statistics">Home</a></li>
-					<li className="menu__list-item"><a className="menu__link " href="/Profile">Profile</a></li>
-                    <li className="menu__list-item"><a className="menu__link " href="/About">About</a></li>
-                    <li className="menu__list-item"><a className="menu__link_ou " href="/Login">Log Out</a></li>
-                    
-                </ul>						
-			</div>
-			</nav>
-			</div>
-		);	
+
+
+            <div class="topnav">
+				<div class="left1">
+                <h1 className="logo1">Pulse Your Life</h1>
+                </div>
+
+                <a class="active" href="/Statistics">Home</a>
+                <a href="/Profile">Account</a>
+                <a href="/About">About</a>
+                <a href="/Login">Log Out</a>
+
+            </div>
+
+
+        );
 	}
 }
 

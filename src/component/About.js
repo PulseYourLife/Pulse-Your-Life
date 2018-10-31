@@ -15,9 +15,10 @@ export class About extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <CssBaseline/>
+
+                <Menu />
                 <main className="layout">
-					<Menu />
+
                     <Paper className="paper">
                         <Button variant={"raised"} color={"primary"} size={"large"}>Google Play</Button>
                         <br/><br/>

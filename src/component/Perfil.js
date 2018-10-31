@@ -6,6 +6,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
+import {Menu} from './Menu';
 import { Button, ButtonGroup } from 'reactstrap'
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -71,15 +72,17 @@ export class Perfil extends React.Component{
 
     cancelEventHandler = event => {
         window.location.reload();
-        localStorage.setItem('nombre1', localStorage.getItem('nombre'));
-        localStorage.setItem('email1', localStorage.getItem('email'));
-        localStorage.setItem('height1', localStorage.getItem('height'));
-        localStorage.setItem('weight1', localStorage.getItem('weight'));
+        localStorage.setItem('nombre', "Brandon Prieto");
+        localStorage.setItem('email', "brandonp93@gmail.com");
+        localStorage.setItem('age', "30");
+        localStorage.setItem('weight', "64");
+        localStorage.setItem('height', "175");
     }
 
     render(){
         return (
             <React.Fragment>
+                <Menu/>
                 <div class="row">
                     <div class="column">
                         <div class="column11">
