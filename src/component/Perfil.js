@@ -6,13 +6,16 @@ import FormLabel from '@material-ui/core/FormLabel';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import './Perfil.css'
+import './Perfil.css';
+import {Menu} from './Menu';
+
 
 export class Perfil extends React.Component{
     render(){
         return (
             <React.Fragment>
-                <main className="lay">
+				<Menu />
+                <main className="lay">				
                     <Paper className="pap">
                         <Avatar className="perfil" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0l-p8Oe5wqHfNQv0L6A4OuAfrZmb7M6Wvnd7-LeMQB6BmBu37Sg"/>
                         <Typography class="nombre">Roberto Gomez</Typography>
